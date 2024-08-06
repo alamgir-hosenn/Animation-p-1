@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background: rgba(5, 5, 5, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu {
+  width: 200px;
+  height: 200px;
+  background-image: linear-gradient(to right, green, yellowgreen);
+  margin: 8px;
+  border-radius: 0.3em;
+}
+.menu div {
+  width: 120px;
+  height: 120px;
+  margin: 40px;
+  position: relative;
+}
+.menu span {
+  background: #000000;
+  height: 10px;
+  width: 100%;
+  border-radius: 5px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.menu .line-1 {
+  transform: translate(-50%, -50px);
+  transition: transform 0.5s;
+}
+.menu:hover .line-1 {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.menu .line-2 {
+  opacity: 1;
+  transition: visibility 0.2s, opacity 0.2s;
+}
+.menu:hover .line-2 {
+  visibility: hidden;
+  opacity: 0;
+}
+.menu .line-3 {
+  transform: translate(-50%, 40px);
+  transition: transform 0.5s;
+}
+.menu:hover .line-3 {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
